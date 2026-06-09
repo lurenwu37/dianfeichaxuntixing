@@ -22,7 +22,7 @@ def send_to_server_chan(title, content):
     # 明确将 title 和 desp 放入数据中
     data = {
         "title": 电费预警,   # 这里就是你想改的“标题”
-        "desp": 电费过低啦！尽快交电费！   # 这里就是你想改的“正文”
+        "desp": 电费过低啦!尽快交电费!   # 这里就是你想改的“正文”
     }
     
     try:
