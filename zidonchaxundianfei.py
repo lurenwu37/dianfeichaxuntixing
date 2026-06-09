@@ -12,16 +12,19 @@ THRESHOLD = 10.0
 # ---------------
 
 def send_to_server_chan(title, content):
-    """通过 Server 酱发送微信提醒"""
+    """通过 Server 酱 POST 方式发送自定义提醒"""
     if not SERVER_KEY:
-        print("未检测到 SERVER_KEY，跳过推送")
         return
     
+    # 使用官方推荐的 POST 接口
     push_url = f"https://sctapi.ftqq.com/{SERVER_KEY}.send"
+    
+    # 明确将 title 和 desp 放入数据中
     data = {
-        "title": title,
-        "desp": content
+        "title": 电费预警,   # 这里就是你想改的“标题”
+        "desp": 电费过低啦！尽快交电费！   # 这里就是你想改的“正文”
     }
+    
     try:
         requests.post(push_url, data=data)
         print("推送发送成功")
