@@ -22,7 +22,7 @@ def send_to_server_chan(title, content):
     # 明确将 title 和 desp 放入数据中
     data = {
         "title": "电费预警"
-        "desp": "电量过低喔! 尽快交电费!""
+        "desp": "电量过低喔! 尽快交电费!"
     }
     
     try:
