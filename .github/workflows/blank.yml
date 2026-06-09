@@ -1,0 +1,26 @@
+name: Check Power Daily
+
+on:
+  schedule:
+    - cron: '0 0,10 * * *'  # GitHub 使用 UTC 时间，比北京时间慢 8 小时
+  workflow_dispatch:        # 允许你手动在网页上点击“Run workflow”来测试
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run script
+        env:
+          SERVER_KEY: ${{ secrets.SERVER_KEY }}
+        run: python 自动查询电费.py
