@@ -54,13 +54,13 @@ def check_power():
         if remaining_power < THRESHOLD:
             title = "电费预警"
             msg = f"宿舍 8112 当前剩余电量仅剩 {remaining_power} 度，请及时充值！"
-            send_to_server_chan(title, msg)
+            send_to_server_chan()
         else:
             print("电量充足，无需提醒")
             
     except Exception as e:
         print(f"查询出错: {e}")
-        send_to_server_chan("电费查询错误", f"查询脚本运行出错: {str(e)}")
+        send_to_server_chan()
 
 if __name__ == "__main__":
     check_power()
