@@ -8,7 +8,7 @@ URL = "http://www.gyruibo4.cn/WxSearch/GetRoomInfo?Apartid=48&Roomname=8112"
 # 从环境变量读取 SERVER_KEY (GitHub Secrets)
 SERVER_KEY = os.environ.get("SERVER_KEY")
 # 预警阈值
-THRESHOLD = 3000.0
+THRESHOLD = 10.0
 # ---------------
 
 def send_to_server_chan():
