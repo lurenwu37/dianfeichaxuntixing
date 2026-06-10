@@ -11,7 +11,7 @@ SERVER_KEY = os.environ.get("SERVER_KEY")
 THRESHOLD = 10.0
 # ---------------
 
-def send_to_server_chan(title, content):
+def send_to_server_chan():
     """通过 Server 酱 POST 方式发送自定义提醒"""
     if not SERVER_KEY:
         return
