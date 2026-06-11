@@ -14,7 +14,10 @@ on:
       timezone: Asia/Shanghai
     - cron: '55 9 * * *'    # 上海时间 01:20 (17点 UTC)
       timezone: Asia/Shanghai    
-  workflow_dispatch:        # 允许你手动在网页上点击“Run workflow”来测试
+  workflow_dispatch:    # 允许你手动在网页上点击“Run workflow”来测试
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs: #有哪些任务要做
   build: #任务名字,随意起
