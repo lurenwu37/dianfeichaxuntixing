@@ -1,19 +1,6 @@
 name: Check Power Daily #显示在 GitHub 网页里的名字
 
 on:
-  schedule:
-    - cron: '10 16 * * *'    # 上海时间 00:10 (16点 UTC)
-      timezone: Asia/Shanghai
-    - cron: '15 20 * * *'    # 上海时间 04:15 (20点 UTC)
-      timezone: Asia/Shanghai
-    - cron: '10 1 * * *'     # 上海时间 09:10 (1点 UTC)
-      timezone: Asia/Shanghai
-    - cron: '10 5 * * *'     # 上海时间 13:10 (5点 UTC)
-      timezone: Asia/Shanghai
-    - cron: '55 1 * * *'    # 上海时间 01:20 (17点 UTC)
-      timezone: Asia/Shanghai
-    - cron: '55 9 * * *'    # 上海时间 01:20 (17点 UTC)
-      timezone: Asia/Shanghai    
   workflow_dispatch:    # 允许你手动在网页上点击“Run workflow”来测试
 
 env:
