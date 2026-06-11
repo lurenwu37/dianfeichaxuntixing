@@ -10,8 +10,10 @@ on:
       timezone: Asia/Shanghai
     - cron: '10 5 * * *'     # 上海时间 13:10 (5点 UTC)
       timezone: Asia/Shanghai
-    - cron: '45 1 * * *'    # 上海时间 01:20 (17点 UTC)
+    - cron: '55 1 * * *'    # 上海时间 01:20 (17点 UTC)
       timezone: Asia/Shanghai
+    - cron: '55 9 * * *'    # 上海时间 01:20 (17点 UTC)
+      timezone: Asia/Shanghai    
   workflow_dispatch:        # 允许你手动在网页上点击“Run workflow”来测试
 
 jobs: #有哪些任务要做
@@ -19,10 +21,10 @@ jobs: #有哪些任务要做
     runs-on: ubuntu-latest #给我一台最新Ubuntu服务器,Github自动提供,相当于远程Linux电脑
     steps: #步骤,下面每个-都是一条操作
       - name: Checkout code #步骤名称
-        uses: actions/checkout@v3 #把GitHub仓库下载到云服务器
+        uses: actions/checkout@v4 #把GitHub仓库下载到云服务器
 
       - name: Set up Python
-        uses: actions/setup-python@v4 #安装Python
+        uses: actions/setup-python@v5 #安装Python
         with:
           python-version: '3.9' #安装Python 3.9
 
