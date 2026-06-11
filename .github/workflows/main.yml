@@ -6,6 +6,8 @@ on:
     - cron: '15 4 * * *'
     - cron: '10 9 * * *'
     - cron: '10 13 * * *'
+    - cron: '20 1 * * *'
+    timezone: Asia/Shanghai
   workflow_dispatch:        # 允许你手动在网页上点击“Run workflow”来测试
 
 jobs: #有哪些任务要做
